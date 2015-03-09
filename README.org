@@ -1,0 +1,46 @@
+
+Fobwart is (perhaps) my March #1GAM game.  It's a game I've been
+trying to finish for some time.  This version will be much less
+ambitious than earlier versions.
+
+
+Included for ironic amusement is the last rousing motivational readme
+I wrote for this, in 2011:
+
+----------------------------------------
+               Fobwart
+ A massively multiplayer 2D action game
+----------------------------------------
+
+Julian Squires <julian@cipht.net> / 2011
+----------------------------------------
+
+This game is the result of many years of hard slacking.  I originally
+wrote an implementation (with naïve frame-locked network code) in 2000
+or so, I'm not even sure, it might have been before then.  It was
+written in C with Lua scripting (long before Lua had become really
+popular as a game scripting language).  There were ripped sprites from
+all sorts of NES games, and it was a real mess.  I think the output
+was done with SVGAlib!  Still, I managed to convince poor Retsyn to do
+quite a bit of great original art for it before I finally decided to
+scrap it and rewrite.
+
+The rewrites have happened a few times over the past decade, in C, ML,
+Common Lisp, Flash, and possibly others I've forgotten.  I did get
+another set of amazing art from Retsyn after we expanded the scope of
+what would be required, art-wise, and that bundle of art is probably
+what causes me to revive this project every few years.
+
+Just recently I thought it would be interesting to revive this as a
+browser-based game (using Flash (actually haXe, but targetting Flash))
+with Erlang on the server-side.  The scripting language, wart, had
+been a Lisp-like language through the last decade of non-rewrites, but
+I decided Smalltalk/Slate were a better model for the
+prototype-oriented environment I envisioned.  Unfortunately, after a
+fair bit of hacking, I discovered that doing low-latency communication
+with Flash was going to require way more effort than I was willing to
+put into something that should have been trivial.
+
+In my fury, I started writing this version, with the client in C,
+because damnit, if there's one thing that remains true throughout
+history, is that you can do it in C.
